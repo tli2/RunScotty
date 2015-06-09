@@ -1,0 +1,53 @@
+<html>
+<head>
+<script>
+  var randomBG = Math.floor((Math.random() * 5) + 1);
+  var bgString = "pic/" + randomBG + ".png";
+
+  var bg = new Image();
+  bg.src = bgString;
+
+  var dog = new Image();
+  dog.src = "pic/scottie.png";
+
+  var wall = new Image();
+  wall.src = "pic/Fence.png";
+
+  var mit = new Image();
+  mit.src = "pic/Evil_MIT_Student.png";
+</script>
+<script src="Actor.js"></script>
+<script src="Grid.js"></script>
+<script src="Square.js"></script>
+<script src="Triangle.js"></script>
+<script src="Circle.js"></script>
+<script src="draw-test.js"></script>
+<script src="ProcessTriangle.js"></script>
+<script src="Collision.js"></script>
+<script src="AIInterface.js"></script>
+
+</head>
+
+<body style="margin: 0; padding: 0;">
+  <canvas id="board" height="300" width="300"></canvas>
+
+  <script>
+  var done = false;
+  var notStarted = true;
+  </script>
+
+  <script src="draw.js"></script>
+  <script src="user.js"></script>
+  <script src="main.js"></script>
+
+  <script>
+  function startGame() {
+    notStarted = false;
+    init_draw(myGrid, ctx);
+  }
+  </script>
+
+
+  
+</body>
+</html>

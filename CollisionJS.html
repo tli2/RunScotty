@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html>
+<body>
+
+
+
+<p id="results"></p>
+
+<p id="listResults"></p>
+
+<script src="Actors.js"></script>
+<script src="Collision.js"></script>
+
+<script>
+
+var LEFT = 0;
+var RIGHT = 1;
+var TOP = 2;
+var BOT = 3;
+
+
+var result = new String();
+var data = [10, 10, 15, 5, 7];
+result += testCollision(data) + "<br>";
+data = [100, 100, 50, 50, 7];
+result += testCollision(data) + "<br>";
+
+document.getElementById("results").innerHTML = result; 
+
+var point = [10, 10];
+var radius = 7;
+var testPoints = [[100, 100], [150, 150], [10,20], [25, 10], [15, 30]];
+
+var listResult = new String();
+listResult += testCollisionList(point, testPoints, radius) + "<br>";
+testPoints.push([5, 5]);	
+listResult += testCollisionList(point, testPoints, radius) + "<br>";
+
+document.getElementById("listResults").innerHTML = listResult;
+
+
+function testCollisionList(point, list, r) {
+	return list.toString() + " " + didCollideWithAnyPoint(point[0], point[1], list, r);
+}
+
+function testCollision(data) {
+	return data.toString() + " "+ didCollide(data[0], data[1], data[2], data[3], data[4]);
+}
+
+
+
+
+
+</script>
+</body>
+</html>

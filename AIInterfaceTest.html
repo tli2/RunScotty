@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="output"></p>
+
+<script src="Actors.js"></script>
+
+<script>
+	
+	console.log("Running code");
+	var grid = new Grid();
+	grid.add_actor(new Actors(10, 10, 10, 10, 42));
+	grid.add_actor(new Pitt_Student(40, 40, 10, 10, 15122));
+	var triangles = grid.getAllTriangles();
+
+	document.getElementById("output").innerHTML = "Triangles: " + triangles; 
+
+</script>
+
+</body>
+</html>
